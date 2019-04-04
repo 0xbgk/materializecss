@@ -25,6 +25,15 @@
             padding-bottom: 4vw;
         }
 
+        .tabs .indicator {
+            background-color: #1a237e;
+        }
+
+        .tabs .tab a:focus,
+        .tabs .tab a:focus.active {
+            background: transparent;
+        }
+
         @media screen and (max-width:670px) {
             header {
                 min-height: 500px;
@@ -95,12 +104,36 @@
         </div>
     </div>
     <!-- services / tabs -->
-    <div class="container">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, perferendis.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, perferendis.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, perferendis.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, perferendis.</p>
-    </div>
+    <section class="container section" id="services">
+        <div class="row">
+            <div class="col s12 l4">
+                <h2 class="indigo-text text-darken-4">What I do...</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, possimus.</p>
+            </div>
+            <div class="col s12 l6 offset-l2">
+                <ul class="tabs">
+                    <li class="tab col s6">
+                        <a href="#photograpy" class="indigo-text text-darken-4">Photograpy</a>
+                    </li>
+                    <li class="tab col s6">
+                        <a href="#editing" class="indigo-text text-darken-4">Editing</a>
+                    </li>
+                </ul>
+                <div class="col s12" id="photograpy">
+                    <p class="flow-text indigo-text text-darken-4">PHOTOGRAPHY</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="col s12" id="editing">
+                    <p class="flow-text indigo-text text-darken-4">EDITING</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- parallax -->
     <div class="parallax-container">
         <div class="parallax">
@@ -124,6 +157,7 @@
             $('.sidenav').sidenav();
             $('.materialboxed').materialbox();
             $('.parallax').parallax();
+            $('.tabs').tabs();
         });
     </script>
 </body>
